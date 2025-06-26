@@ -1,0 +1,57 @@
+[
+  {
+    "nombre": "Jada Especial",
+    "descripcion": "Nuestra hamburguesa estrella con 100gr de carne, jugoso jamón, queso derretido, tocino crujiente, cebolla caramelizada y aguacate fresco. ¡Una explosión de sabor en cada bocado!",
+    "precio": "$55",
+    "imagen": "img/especial.jpg",
+    "destacado": true,
+    "badge": "¡La Favorita!",
+    "subtitulo": "El sabor de siempre"
+  },
+  {
+    "nombre": "Champiñones",
+    "descripcion": "Exquisita carne de 100gr, jamón, queso fundido, tocino crujiente y generosos champiñones salteados. ¡Un deleite para los amantes de los hongos!",
+    "precio": "$50",
+    "imagen": "img/champinones.jpg",
+    "destacado": false,
+    "badge": "¡Mas vendida!",
+    "subtitulo": "¡Sabor Intenso!"
+  },
+  {
+    "nombre": "Chicken Burger",
+    "descripcion": "Pechuga de pollo empanizada y dorada, queso, cebolla, tomate, lechuga y nuestro aderezo especial de la casa. ¡Una opción ligera y llena de sabor!",
+    "precio": "$65",
+    "imagen": "img/chicken.jpg",
+    "destacado": false,
+    "badge": "¡Mas vendida!",
+    "subtitulo": "¡Crujiente y Deliciosa!"
+    
+  },
+  {
+    "nombre": "Clásica",
+    "descripcion": "Carne de 100gr, jamón, queso y tocino. ¡El sabor auténtico que nunca falla! Acompañada de crujientes papas a la francesa.",
+    "precio": "$40",
+    "imagen": "img/clasica.jpg",
+    "destacado": false,
+    "badge": " ¡Mas vendida!",
+    "subtitulo": "¡El Sabor de Siempre!"
+  },
+  {
+    "nombre": "Hawaiana",
+    "descripcion": "Deliciosa hamburguesa con jamón, queso, tocino, salchicha y piña natural. ¡Una combinación agridulce irresistible!",
+    "precio": "$50",
+    "imagen": "img/hawaiana.jpg",
+    "destacado": false,
+    "badge": "¡Mas vendida!",
+    "subtitulo": "¡Toque Tropical!"
+  },
+  {
+    "nombre": "Mexicana",
+    "descripcion": "Hamburguesa con 100g de carne, jamón, queso, tocino, cebolla frita, aguacate y totopos en julianas. Con un toque de jalapeño (tapatio) para el paladar aventurero. ¡Acompañada de papas!",
+    "precio": "$50",
+    "imagen": "img/mexicana.jpg",
+    "destacado": false,
+    "badge": "¡Mas vendida!",
+    "subtitulo": "¡Sabor Picantón!"
+  }
+]

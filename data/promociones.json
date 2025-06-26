@@ -1,0 +1,42 @@
+[
+  {
+    "dia": "Martes",
+    "titulo": "¡Martes de Boneless: 10 piezas a elegir por solo $99!",
+    "descripcion": " ¡Empieza la semana con el sabor que te encanta! Este Martes, disfruta de 10 irresistibles piezas de Boneless, suaves por dentro y crujientes por fuera. Elige un sabor de tu preferencia entre: Mango Habanero, Mango, Búfalo, Hot o BBQ. ¡Todas acompañadas de aderezo y bastones de apio y zanahoria para refrescar!.",
+    "precio": "$99",
+    "destacado": false,
+    "imagenes": ["img/MartesBoneles10p.png"]
+  },
+  {
+    "dia": "Miércoles",
+    "titulo": "¡Miércoles de Combo Perfecto: Hamburguesa, Boneles y Papas por solo $80!",
+    "descripcion": "¡A mitad de semana, date el gusto con nuestro combo más completo! Este Miércoles, disfruta de: 1 deliciosa Hamburguesa a elegir entre: Mexicana, Hawaiana, Champiñones o Clásica. 3 suculentos Boneles con 1 sabor a elegir entre: Mango Habanero, Mango, Búfalo, BBQ o Hot. Una porción generosa de papas crujientes para acompañar. ¡La combinación ideal para tu antojo de Miércoles!.",
+    "precio": "$80",
+    "destacado": false,
+    "imagenes": ["img/MiercolesHamburgesas.png"]
+  },
+  {
+    "dia": "Jueves",
+    "titulo": "¡Jueves de Alitas: 10 piezas a elegir por solo $99!",
+    "descripcion": "¡Prepárate para un Jueves lleno de sabor! Disfruta de 10 irresistibles piezas de alitas bañadas en tu salsa favorita. Tienes un sabor a elegir entre nuestras opciones estrella: Mango Habanero, Mango, Búfalo, Hot o BBQ. ¡La opción perfecta para tus antojos!.",
+    "precio": "$99",
+    "destacado": false,
+    "imagenes": ["img/10Alitasx99.png"]
+  },
+  {
+    "dia": "Viernes",
+    "titulo": "¡Viernes de Alitas o Boneless con Papas por solo $120!",
+    "descripcion": "¿Antojo de alitas o boneless para empezar el fin de semana? ¡El Viernes tenemos tu combo ideal! Disfruta de 10 piezas de Alitas o 10 piezas de Boneles, perfectamente acompañadas de crujientes papas y aderezo. ¡Elige tu favorito y celebra con este clásico!.",
+    "precio": "120",
+    "destacado": false,
+    "imagenes": ["img/AlitasyBoneles.jpg"]
+  },
+  {
+    "dia": "Viernes",
+    "titulo": " ¡Viernes de Dúo de Chicken Burgers por solo $100!",
+    "descripcion": "¡El inicio de fin de semana merece un festín! Este Viernes, llévate el combo perfecto con dos deliciosas y crujientes hamburguesas de pollo. Cada una viene con lechuga fresca, tomate y queso, en un pan suave. ¡Ideal para compartir o para darte un gran gusto!.",
+    "precio": "100",
+    "destacado": false,
+    "imagenes": ["img/2chickenx100.png"]
+  }
+]

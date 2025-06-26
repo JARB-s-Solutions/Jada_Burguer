@@ -1,0 +1,887 @@
+/* === VARIABLES Y ESTILOS GENERALES === */
+:root {
+  --primary: #FF8C00;
+  --secondary: #FFA500;
+  --accent: #FFD700;
+  --dark: #111;
+  --darker: #000;
+  --light: #FFF;
+  --gray: #AAA;
+  --dark-gray: #333;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  background-color: var(--darker);
+  color: var(--light);
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* === ENCABEZADO MEJORADO === */
+header {
+  position: relative;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  background-color: var(--darker);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.header-content {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+
+.logo-banner {
+  width: 50%;
+  max-height: 300px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+.header-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  z-index: 2;
+}
+
+.header-text h1 {
+  color: var(--primary);
+  font-size: 3rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+.slogan {
+  color: var(--accent);
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.contact-float {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+/* === SECCIONES DE MENÚ === */
+.menu {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.section-header h2 {
+  font-size: 2rem;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.section-header h2::after {
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 3px;
+  background: var(--secondary);
+  bottom: -8px;
+  left: 25%;
+}
+
+.section-subtitle {
+  color: var(--gray);
+  font-size: 0.9rem;
+}
+
+.menu-items, .menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 0 1rem;
+}
+
+.item {
+  background-color: var(--dark);
+  border: 1px solid var(--dark-gray);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s ease forwards;
+  animation-delay: calc(var(--order) * 0.1s);
+  position: relative;
+  overflow: hidden;
+}
+
+.item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: var(--primary);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.item:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: 0 10px 25px rgba(255, 140, 0, 0.2);
+  border-color: var(--primary);
+}
+
+.item:hover::before {
+  transform: scaleX(1);
+}
+
+.item h3 {
+  color: var(--accent);
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.emoji {
+  font-size: 1.2rem;
+}
+
+.item ul {
+  list-style: none;
+}
+
+.item ul li {
+  padding: 0.5rem 0;
+  border-bottom: 1px dashed var(--dark-gray);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price {
+  background-color: var(--primary);
+  color: var(--darker);
+  padding: 0.2rem 0.5rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.salsas li {
+  border-bottom: none !important;
+  padding: 0.3rem 0 !important;
+}
+
+.spicy {
+  letter-spacing: 2px;
+}
+
+.item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 1rem 0;
+  border: 1px solid var(--dark-gray);
+}
+
+.item p {
+  color: var(--gray);
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+/* Estylos del menu de hamburguesas*/
+.card {
+  background-color: #1f1f1f;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(255, 140, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 20px #ff6b00;
+}
+
+.card-badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background-color: #ff6b00;
+  color: #fff;
+  font-weight: bold;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  z-index: 1;
+}
+
+.card-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.card:hover .card-img {
+  transform: scale(1.05);
+}
+
+.card-body {
+  padding: 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #ffc107;
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-price {
+  background-color: #ff6b00;
+  color: #fff;
+  font-weight: bold;
+  padding: 0.3rem 0.8rem;
+  border-radius: 5px;
+  font-size: 1.1rem;
+}
+
+.card-subtitle {
+  font-size: 1rem;
+  color: #ffc107;
+  font-style: italic;
+  margin-bottom: 1rem;
+  opacity: 0.8;
+}
+
+.card-description {
+  font-size: 0.95rem;
+  color: #ccc;
+  margin-bottom: 1rem;
+}
+
+.menu-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+
+}
+
+/* === SECCIÓN DE CONTACTO === */
+.contact-section {
+  background: linear-gradient(to right, var(--dark), var(--darker));
+  padding: 3rem 1rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.contact-section h2 {
+  color: var(--light);
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.contact-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--primary);
+  color: var(--darker);
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.cta-button:hover {
+  background-color: transparent;
+  color: var(--primary);
+  border-color: var(--primary);
+  transform: translateY(-3px);
+}
+
+.cta-button img {
+  width: 20px;
+  height: 20px;
+}
+
+.whatsapp {
+  background-color: #25D366;
+  color: white;
+}
+
+.whatsapp:hover {
+  background-color: transparent;
+  color: #25D366;
+  border-color: #25D366;
+}
+
+/* === FOOTER === */
+footer {
+  background-color: var(--dark);
+  padding: 3rem 1rem 1.5rem;
+  color: var(--gray);
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-section h3 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.footer-section h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background: var(--primary);
+}
+
+.footer-section p {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.footer-logo {
+  width: 60px;
+  margin-bottom: 1rem;
+}
+
+.icon {
+  width: 16px;
+  vertical-align: middle;
+  margin-right: 0.5rem;
+}
+
+.redes {
+  display: flex;
+  gap: 1rem;
+}
+
+.redes a img {
+  width: 28px;
+  transition: transform 0.3s ease;
+}
+
+.redes a:hover img {
+  transform: scale(1.2);
+}
+
+.copyright {
+  text-align: center;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--dark-gray);
+  font-size: 0.8rem;
+}
+
+/* ===== ESTILOS PERSONALIZABLES DEL BANNER ===== */
+
+/* Contenedor del Banner */
+.banner-container {
+    position: relative; /* Permite posicionar elementos hijos de forma absoluta */
+    width: 100%;        /* Ocupa todo el ancho disponible */
+    max-height: 450px;  /* Altura máxima del contenedor. Ajusta este valor si lo necesitas. */
+    overflow: hidden;   /* Oculta cualquier contenido que se desborde del contenedor */
+}
+
+/* Imagen del Banner */
+.banner-img {
+    width: 100%;        /* La imagen ocupa todo el ancho de su contenedor */
+    max-height: 320px;  /* Altura máxima de la imagen, para que no se extienda demasiado */
+    object-fit: contain; /* Asegura que toda la imagen sea visible dentro de sus dimensiones,
+                           
+    display: block;     /* Elimina el espacio extra debajo de las imágenes que a veces*/
+                           
+}
+  
+/* === Boton flotante wasapppp === */
+
+.contact-float {
+    position: fixed;
+    top: 20px;   /* ¡Cambia de 'bottom' a 'top'! */
+    right: 20px;
+    z-index: 1000;
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    border-radius: 30px;
+    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 60px;
+    height: 60px;
+    padding: 0;
+}
+        
+        .contact-float:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 25px rgba(37, 211, 102, 0.4);
+        }
+        
+        .contact-float-icon {
+             width: 30px;
+            height: 30px;
+            fill: white;
+            flex-shrink: 0;
+            margin-left: 15px;
+            transition: margin-left 0.4s ease;
+        }
+        
+        .contact-float-text {
+            color: white;
+            font-weight: 600;
+            font-size: 16px;
+            white-space: nowrap;
+            margin-left: 12px;
+            opacity: 0;
+            transform: translateX(10px);
+            font-family: 'Poppins', sans-serif;
+        }
+        .contact-float {
+    
+    text-decoration: none; /* línea para quitar el subrayado */
+}
+
+/* Estylos para el lnik de jarvs */
+
+.dev-credit a {
+  text-decoration: none;  /* Quita el subrayado */
+  color: inherit;          /* Hereda el color del texto padre */
+}
+
+.dev-credit a:visited {
+  color: inherit;          /* También quita el morado en enlaces visitados */
+}
+
+
+/* === ANIMACIONES === */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+
+.promo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+/* === SECCIÓN DE PROMOCIONES (LIMPIO Y FUNCIONAL) === */
+
+.promo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 0 1rem;
+  margin-bottom: 3rem;
+}
+
+.promo-card {
+  background-color: #1f1f1f;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(255, 140, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.promo-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 20px #ff6b00;
+}
+
+.promo-carousel {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+}
+
+.promo-carousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.promo-carousel img.active {
+  opacity: 1;
+}
+
+.promo-card:hover .promo-carousel img.active {
+  transform: scale(1.05);
+}
+
+.promo-content {
+  padding: 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.promo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  box-sizing: border-box;
+}
+
+.promo-day {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--accent);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-grow: 1;
+  flex-shrink: 1;
+  min-width: 0;
+}
+
+.promo-price {
+  background-color: #ff6b00;
+  color: #fff;
+  font-weight: bold;
+  padding: 0.3rem 0.8rem;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.promo-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffc107;
+  margin: 0.3rem 0 0.5rem;
+}
+
+.promo-subtitle {
+  font-size: 1rem;
+  color: #ffdb6d;
+  font-style: italic;
+  opacity: 0.9;
+  margin-bottom: 0.5rem;
+}
+
+.promo-desc {
+  font-size: 0.95rem;
+  color: #ccc;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+}
+
+.promo-badge,
+.hoy-badge,
+.destacado-badge {
+  position: absolute;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  z-index: 2;
+}
+
+.destacado-badge {
+  top: 15px;
+  left: 15px;
+  background-color: var(--primary);
+  color: var(--darker);
+}
+
+.hoy-badge {
+  top: 45px;
+  left: 15px;
+  background-color: var(--accent);
+  color: var(--darker);
+}
+
+/* === ANIMACIONES === */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+
+/* === MEDIA QUERIES === */
+@media (max-width: 480px) {
+  .promo-card {
+    padding: 1rem;
+  }
+  .promo-header {
+    gap: 0.5rem;
+  }
+  .promo-day {
+    font-size: 0.95rem;
+  }
+  .promo-price {
+    padding: 0.2rem 0.5rem;
+    font-size: 0.9rem;
+  }
+  .banner-img {
+    width: 120vw; /* Más grande que el viewport */
+    max-width: none; /* Para que no lo limite */
+    transform: scale(1.4); /*Aumenta el tamaño de la imagen */
+    transform-origin: center;
+     transform: scale(1.2) translateX(-47px);
+   
+  }
+}
+
+/* 3. Tablets y dispositivos medianos (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .banner-container {
+    height: 280px;
+  }
+  
+  .banner-text {
+    padding: 0 2rem;
+  }
+  
+  .banner-title {
+    font-size: 2.8rem;
+  }
+  
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  
+  .contact-float {
+    right: 25px;
+    bottom: 25px;
+  }
+}
+
+/* 4. Desktop pequeños (1025px - 1200px) */
+@media (min-width: 1025px) and (max-width: 1200px) {
+  .banner-container {
+    height: 400px;
+  }
+  
+  .menu-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* 5. Mejoras específicas para móviles en portrait */
+@media (max-width: 480px) and (orientation: portrait) {
+  .banner-container {
+    height: 300px;
+  }
+  
+  .banner-title {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .banner-slogan {
+    font-size: 0.9rem;
+  }
+  
+  .section-header h2 {
+    font-size: 1.4rem;
+  }
+  
+  .section-subtitle {
+    font-size: 0.9rem;
+  }
+  
+  .item {
+    padding: 0.8rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .item h3 {
+    font-size: 1.1rem;
+  }
+  
+  .item li {
+    font-size: 0.9rem;
+  }
+  
+  .price {
+    font-size: 0.9rem;
+  }
+  
+  .contact-float {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    transform: scale(0.80);
+    z-index: 999;
+  }
+  
+  .footer-section {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* 6. Optimización para tablets en landscape */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .banner-container {
+    height: 300px;
+  }
+  
+  .menu-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* 7. Ajustes para pantallas muy grandes (más de 1920px) */
+@media (min-width: 1921px) {
+  .container {
+    max-width: 1800px;
+    margin: 0 auto;
+  }
+}
+
+/* 8. Mejoras de accesibilidad en modo retrato */
+@media (orientation: portrait) {
+  :root {
+    scroll-padding-top: 80px; /* Espacio para fixed headers */
+  }
+}
+
+/* 9. Ajustes específicos para iOS */
+@supports (-webkit-touch-callout: none) {
+  .banner-container {
+    height: calc(100vh - 80px); /* Ajuste para Safari iOS */
+  }
+}
+
+/* 10. Transiciones suaves para cambios de tamaño */
+@media (prefers-reduced-motion: no-preference) {
+  .banner-container,
+  .menu-grid,
+  .footer-content {
+    transition: all 0.3s ease;
+  }
+}
+
+/* 11. Mejoras para impresión */
+@media print {
+  .contact-float,
+  .redes {
+    display: none !important;
+  }
+  
+  body {
+    font-size: 12pt;
+    line-height: 1.5;
+  }
+  
+  .banner-container {
+    height: auto !important;
+  }
+  
+  .menu {
+    page-break-inside: avoid;
+  }
+}
