@@ -62,9 +62,9 @@ Agrega aquí una captura de pantalla del sitio para mejorar la presentación vis
 
 ## 🚀 Despliegue
 
-Visualiza el sitio en Vercel:  
-🔗 [https://tu-proyecto.vercel.app](#)  
-_(Reemplazar por URL real del despliegue)_
+Visualiza el sitio Desarrollado:  
+🔗 [(https://jadaburger.com/)](#)  
+__
 
 ---
 
@@ -73,7 +73,7 @@ _(Reemplazar por URL real del despliegue)_
 **JARB'S Solutions**  
 Desarrollo de software a medida, sitios web modernos y soluciones digitales para empresas.
 
-- 🌐 Web: [https://jarbssolutions.com](#)  
+- 🌐 Web: [jarbs.solutions@gmail.com](#)  
 - 📩 Email: contacto@jarbssolutions.com _(opcional)_
 
 ---
