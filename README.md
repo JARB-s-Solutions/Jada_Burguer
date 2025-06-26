@@ -64,7 +64,7 @@ Agrega aquí una captura de pantalla del sitio para mejorar la presentación vis
 
 Visualiza el sitio Desarrollado:  
 🔗 [https://jadaburger.com/](#)  
-__
+
 
 ---
 
@@ -74,7 +74,7 @@ __
 Desarrollo de software a medida, sitios web modernos y soluciones digitales para empresas.
 
 - 🌐 Web: [https://jarbssolutions.com/](#)  
-- 📩 Email: contacto@jarbssolutions.com _(opcional)_
+- 📩 Email: contacto@jarbssolutions.com 
 
 ---
 
